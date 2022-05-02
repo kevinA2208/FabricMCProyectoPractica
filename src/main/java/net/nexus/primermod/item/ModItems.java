@@ -18,6 +18,9 @@ public class ModItems {
     public static final Item BLOOD_INGOT = registerItem("blood_ingot",
             new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
+    public static final Item BLOOD_SWORD = registerItem("blood_sword",
+            new Item(new FabricItemSettings().group(ItemGroup.COMBAT)));
+
     public static final Item FRIES_POTATO = registerItem("fries_potato",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD)));
 
