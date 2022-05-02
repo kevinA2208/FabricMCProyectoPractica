@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "primermod:mythril_ingot"
+    }
+  },
+  "result": {
+    "item": "primermod:mythril_block",
+    "experience": 1.00
+  }
+}

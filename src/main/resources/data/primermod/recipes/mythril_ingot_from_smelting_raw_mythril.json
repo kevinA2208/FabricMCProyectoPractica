@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "mythril",
+  "ingredient": {
+    "item": "primermod:raw_mythril"
+  },
+  "result": "primermod:mythril_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

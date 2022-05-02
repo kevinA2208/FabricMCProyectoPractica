@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "primermod:mythril_block",
+    "primermod:mythril_ore",
+    "primermod:netherrack_mythril_ore",
+    "primermod:raw_mythril_block"
+  ]
+}
