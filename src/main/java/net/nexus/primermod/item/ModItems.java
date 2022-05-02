@@ -10,10 +10,13 @@ import net.nexus.primermod.PrimerMod;
 public class ModItems {
 
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_NUGGET = registerItem("mythril_nugget",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+    public static final Item RAW_MYTHRIL = registerItem("raw_mythril",
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item BLOOD_INGOT = registerItem("blood_ingot",
             new Item(new FabricItemSettings().group(ItemGroup.MISC)));
@@ -23,6 +26,9 @@ public class ModItems {
 
     public static final Item FRIES_POTATO = registerItem("fries_potato",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD)));
+
+
+
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(PrimerMod.MOD_ID, name), item);
