@@ -34,7 +34,8 @@ public class ModItems {
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ItemGroup.MISC).maxDamage(16).rarity(Rarity.EPIC)));
 
-
+    public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",
+            new Item(new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
 
     //se crea el constructor para los items
