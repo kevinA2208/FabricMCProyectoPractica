@@ -7,11 +7,14 @@
   "item.primermod.raw_mythril": "Raw Mythril",
   "item.primermod.mythril_block": "Mythril Block",
   "item.primermod.mythril_ore": "Mythril Ore",
+  "item.primermod.dowsing_rod": "Dowsing Rod",
 
   "block.primermod.mythril_block": "Mythril Block",
   "block.primermod.mythril_ore": "Mythril Ore",
   "block.primermod.netherrack_mythril_ore": "Netherrack Mythril Ore",
   "block.primermod.raw_mythril_block": "Raw Mythril Block",
 
-  "itemGroup.primermod.mythril": "Mythril Tab"
+  "itemGroup.primermod.mythril": "Mythril Tab",
+
+  "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos"
 }
