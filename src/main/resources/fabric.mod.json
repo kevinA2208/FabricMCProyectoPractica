@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.nexus.primermod.PrimerMod"
+    ],
+    "client": [
+      "net.nexus.primermod.PrimerClientMod"
     ]
   },
   "mixins": [

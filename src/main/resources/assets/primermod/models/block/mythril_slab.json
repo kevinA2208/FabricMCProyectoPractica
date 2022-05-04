@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "primermod:block/mythril_block",
+    "top": "primermod:block/mythril_block",
+    "side": "primermod:block/mythril_block"
+  }
+}

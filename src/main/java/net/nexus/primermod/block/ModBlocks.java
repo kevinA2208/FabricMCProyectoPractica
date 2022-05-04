@@ -64,6 +64,18 @@ public class ModBlocks {
     public static final Block MYTHRIL_WALL = registerBlock("mythril_wall", new WallBlock(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ModItemGroup.MYTHRIL);
 
 
+    public static final Block MYTHRIL_SLAB = registerBlock("mythril_slab", new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ModItemGroup.MYTHRIL);
+
+
+    public static final Block MYTHRIL_STAIRS = registerBlock("mythril_stairs", new StairsBlock(ModBlocks.MYTHRIL_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ModItemGroup.MYTHRIL);
+
+    //En la puerta como se supone que va a ser de madera, es necesario ponerle el Material.WOOD, para que sea de madera, si se pone Material.METAL será necesario usar redstone para abrirla
+    //como una puerta de metal
+    public static final Block KAUPEN_DOOR = registerBlock("kaupen_door", new DoorBlock(
+            FabricBlockSettings.of(Material.WOOD).strength(6f).requiresTool().nonOpaque()),ModItemGroup.MYTHRIL);
+
+    public static final Block KAUPEN_TRAPDOOR = registerBlock("kaupen_trapdoor", new TrapdoorBlock(
+            FabricBlockSettings.of(Material.WOOD).strength(6f).requiresTool().nonOpaque()),ModItemGroup.MYTHRIL);
 
 
 
