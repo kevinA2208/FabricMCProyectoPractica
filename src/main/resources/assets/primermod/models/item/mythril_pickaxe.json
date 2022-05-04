@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "primermod:item/blood_sword"
+    "layer0": "primermod:item/mythril_pickaxe"
   }
 }

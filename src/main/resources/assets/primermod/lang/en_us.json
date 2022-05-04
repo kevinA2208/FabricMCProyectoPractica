@@ -33,6 +33,11 @@
   "item.primermod.dowsing_rod.tooltip": "Presiona §nSHIFT§n para más información",
   "item.primermod.soda_drink.tooltip.shift": "Soda de uva, quita el §lhambre§l, y §lregenera vida§l!",
   "item.primermod.soda_drink.tooltip": "Presiona §nSHIFT§n para más información",
+  "item.primermod.mythril_pickaxe": "Mythril Pickaxe",
+  "item.primermod.mythril_axe": "Mythril Axe",
+  "item.primermod.mythril_shovel": "Mythril Shovel",
+  "item.primermod.mythril_hoe": "Mythril Hoe",
+  "item.primermod.mythril_sword": "Mythril Sword",
 
   "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l"
 
