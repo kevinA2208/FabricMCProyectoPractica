@@ -9,6 +9,7 @@
   "item.primermod.mythril_ore": "Mythril Ore",
   "item.primermod.dowsing_rod": "Dowsing Rod",
   "item.primermod.lilac_flower_bulb": "Lilac Flower Bulb",
+  "item.primermod.soda_drink": "Grape Soda Drink",
 
   "block.primermod.mythril_block": "Mythril Block",
   "block.primermod.mythril_ore": "Mythril Ore",
@@ -18,6 +19,12 @@
 
   "itemGroup.primermod.mythril": "Mythril Tab",
 
-  "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos"
+  "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos",
+  "item.primermod.dowsing_rod.tooltip.shift": "§lClick derecho§l para encontrar bloques valiosos!",
+  "item.primermod.dowsing_rod.tooltip": "Presiona §nSHIFT§n para más información",
+  "item.primermod.soda_drink.tooltip.shift": "Soda de uva, quita el §lhambre§l, y §lregenera vida§l!",
+  "item.primermod.soda_drink.tooltip": "Presiona §nSHIFT§n para más información",
+
+  "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l"
 
 }
