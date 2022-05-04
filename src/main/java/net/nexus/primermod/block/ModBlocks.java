@@ -3,7 +3,6 @@ package net.nexus.primermod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,8 +16,6 @@ import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
 import net.nexus.primermod.block.custom.SpeedyBlock;
 import net.nexus.primermod.item.ModItemGroup;
-import net.nexus.primermod.item.custom.ModPressurePlateBlock;
-import net.nexus.primermod.item.custom.ModStoneButtonBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -46,15 +43,15 @@ public class ModBlocks {
     //y modificar al gusto
 
     //se crea el mythril button, el boton customizado con mythril, que se basa en el esquema o estructura del boton original de piedra de minecraft
-    //para esto se pone que el bloque sea un bloque de tipo ModStoneButtonBlock, se pone que no tiene colision porque es un boton
+    //para esto se pone que el bloque sea un bloque de tipo StoneButtonBlock, se pone que no tiene colision porque es un boton
     public static final Block MYTHRIL_BUTTON = registerBlock("mythril_button",
-            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL)
+            new StoneButtonBlock(FabricBlockSettings.of(Material.METAL)
                     .strength(6f).noCollision()),ModItemGroup.MYTHRIL);
 
-    //Se crea el mythril pressure plate, que se basa del pressure plate de minecraft, se pone que el bloque sea de tipo ModPressurePlateBlock
+    //Se crea el mythril pressure plate, que se basa del pressure plate de minecraft, se pone que el bloque sea de tipo PressurePlateBlock
     //Se le agrega el ActivationRule.EVERYTHING que es necesario, para que la plataforma de presion se active o se presione con cualquier objeto o entidad.
     public static final Block MYTHRIL_PRESSURE_PLATE = registerBlock("mythril_pressure_plate",
-            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.METAL)
                     .strength(6f).requiresTool()),ModItemGroup.MYTHRIL);
 
