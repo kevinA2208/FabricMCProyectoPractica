@@ -17,6 +17,12 @@
   "block.primermod.raw_mythril_block": "Raw Mythril Block",
   "block.primermod.speedy_block": "Speedy Block",
 
+  "block.primermod.mythril_button": "Mythril Button",
+  "block.primermod.mythril_pressure_plate": "Mythril Pressure Plate",
+  "block.primermod.mythril_fence": "Mythril Fence",
+  "block.primermod.mythril_wall": "Mythril Wall",
+  "block.primermod.mythril_fence_gate": "Mythril Fence Gate",
+
   "itemGroup.primermod.mythril": "Mythril Tab",
 
   "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos",

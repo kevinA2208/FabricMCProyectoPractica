@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "primermod:block/mythril_pressure_plate" },
+    "powered=true": { "model": "primermod:block/mythril_pressure_plate_down" }
+  }
+}
