@@ -1,7 +1,6 @@
 package net.nexus.primermod.item.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,8 +13,11 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.nexus.primermod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
+
+import net.minecraft.util.registry.Registry;
 import java.util.List;
 
 public class DowsingRodItem extends Item {
@@ -87,8 +89,7 @@ public class DowsingRodItem extends Item {
 
     //en esta función se chequea si el bloque es igual a un bloque de
     //carbón, cobre, diamante o hierro, si es asi, es un bloque valioso
-    private boolean isValuableBlock(Block block){
-        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE ||
-                block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
+    private boolean isValuableBlock(Block block) {
+        return Registry.BLOCK.getOrCreateEntry(Registry.BLOCK.getKey(block).get()).isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
     }
 }

@@ -7,11 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "primermod:mythril_ingot"
+      "tag": "c:mythril_ingots"
     }
   },
   "result": {
-    "item": "primermod:mythril_block",
-    "experience": 1.00
+    "item": "primermod:mythril_block"
   }
 }
