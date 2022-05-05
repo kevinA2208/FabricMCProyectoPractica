@@ -39,6 +39,13 @@
   "item.primermod.mythril_hoe": "Mythril Hoe",
   "item.primermod.mythril_sword": "Mythril Sword",
 
+  "item.primermod.mythril_helmet": "Mythril Helmet",
+  "item.primermod.mythril_chestplate": "Mythril Chestplate",
+  "item.primermod.mythril_leggings": "Mythril Leggings",
+  "item.primermod.mythril_boots": "Mythril Boots",
+
+
+
   "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l"
 
 }

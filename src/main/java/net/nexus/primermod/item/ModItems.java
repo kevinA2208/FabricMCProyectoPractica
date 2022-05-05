@@ -1,6 +1,7 @@
 package net.nexus.primermod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -50,7 +51,23 @@ public class ModItems {
     public static final Item MYTHRIL_PICKAXE = registerItem("mythril_pickaxe",
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
+    //Armaduras
+    //Se crea el casco de tipo mythril, se crea el objeto en base al ArmorItem de minecraft, se le agrega el material mythril y el equipmentSlot que
+    //en este caso es la cabeza pq es el casco
+    public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
+            new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+    public static final Item MYTHRIL_CHESTPLATE = registerItem("mythril_chestplate",
+            new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+    public static final Item MYTHRIL_LEGGINGS = registerItem("mythril_leggings",
+            new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+    public static final Item MYTHRIL_BOOTS = registerItem("mythril_boots",
+            new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
     //Comida
+    //Se crea el item de comida, y al final se le pone .food para que sea comestible, y se le añade el foodComponent del tipo de comida que sea
     public static final Item FRIES_POTATO = registerItem("fries_potato",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.FRIES_POTATO)));
 
@@ -67,6 +84,8 @@ public class ModItems {
     //Combustibles
     public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",
             new Item(new FabricItemSettings().group(ItemGroup.MATERIALS)));
+
+
 
 
 

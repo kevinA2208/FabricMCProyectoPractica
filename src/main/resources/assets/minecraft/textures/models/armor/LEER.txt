@@ -1,0 +1,9 @@
+En esta parte, se ingresarán las imagenes de texturas de los layers de las armaduras
+que son las partes que se necesitan para que se vea en 3D la armadura en el personaje
+El nombre de los archivos deberá ser:
+
+"Nombre del material" + _ + layer + _ + 1.png y "Nombre del material" + _ + layer + _ + 2.png
+
+ejemplo: iron_layer_1.png y iron_layer_2.png
+
+es importante que quede exactamente igual y bien escrito.
