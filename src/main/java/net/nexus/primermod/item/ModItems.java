@@ -52,10 +52,12 @@ public class ModItems {
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     //Armaduras
-    //Se crea el casco de tipo mythril, se crea el objeto en base al ArmorItem de minecraft, se le agrega el material mythril y el equipmentSlot que
+    //Se crea el casco de tipo mythril, se crea el objeto en base al ModArmorItem de minecraft, con esa clase, le da un efecto completo
+    // a toda nuestra armadura, tan solo poniendosela en una parte de la armadura, despues se le agrega el material mythril y el equipmentSlot que
     //en este caso es la cabeza pq es el casco
+
     public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
-            new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+            new ModArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_CHESTPLATE = registerItem("mythril_chestplate",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
