@@ -1,0 +1,5 @@
+En esta carpeta, se relacionan las formas de los bloques, con las texturas correspondientes, estas texturas se añaden a otra carpeta
+aparte, donde deberá tener la resolución adecuada del bloque
+si el bloque es especial, o necesita dos texturas como las puertas, se deben llamar ambas texturas, tambien se deben
+agregar las variantes de los bloques, como por ejemplo, puerta abierta, puerta cerrada, trampilla puesta arriba o abajo, trampilla abierta
+el boton oprimido, etc, basandose en los bloques originales de minecraft.

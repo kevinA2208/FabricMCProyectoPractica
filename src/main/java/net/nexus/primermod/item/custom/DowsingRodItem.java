@@ -30,9 +30,10 @@ public class DowsingRodItem extends Item {
     //cuando encuentre un bloque y la imagen de el como item
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
+
         //se mira si el mundo en el que esta el jugador es cliente
         if(context.getWorld().isClient()){
-            //pos es position, pues claro xd
+            //pos es position
             //se trae la posicion del bloque que hizo click derecho
             BlockPos positionClicked = context.getBlockPos();
             //se trae el jugador y se guarda
@@ -56,19 +57,21 @@ public class DowsingRodItem extends Item {
                 }
             }
 
-            //si el bloque no es valioso, se manda un mensaje diciendo que no se ha encontrado
+            //si no se encuentra un bloque valioso debajo del jugador, se manda un mensaje diciendo que no se ha encontrado
             if(!foundBlock){
                 player.sendMessage(new TranslatableText("item.primermod.dowsing_rod.no_valuables"), false);
             }
         }
 
-        //gracias a esta parte del codigo, por cada vez que el jugador haga click derecho
-        //con el item, la vida del item baja 1, haciendo que se pueda destruir el item, supongo
+        //creo que en esta parte es para que el item no se pueda stackear o acumular
         context.getStack().damage(1, context.getPlayer(),
                 (player) -> player.sendToolBreakStatus(player.getActiveHand()));
 
         return super.useOnBlock(context);
     }
+
+
+    //FUNCIONES
 
     //con la funcion appendToolTip se le añade un tip al item, que se puede ver desde el inventario
     //se le agrega una llave y esta llave se llama desde el archivo en_us.json de lang, para añadirle el texto o mensaje

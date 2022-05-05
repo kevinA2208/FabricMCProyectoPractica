@@ -1,0 +1,5 @@
+En esta carpeta custom, se crean los items que van a ser personalizados
+o van a tener algun efecto o algo distinto a un item original, pero con su estructura
+Tambien se construira un nuevo item pero sin cambiarle nada al item original de minecraft
+ya que algunos items de minecraft están protegidos, por lo tanto necesitan crearse aparte en otra clase
+de java, para despues crear los items con estas clases nuevas de items

@@ -27,7 +27,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
 
-    //Armas o herramientas
+    //ARMAS O HERRAMIENTAS
     //Para crear las herramientas se crean en base al tipo de herramienta o arma, en este caso se crea un item de tipo SwordItem, se le agrega el
     //daño bonus por ataque, en este caso es 1 pero se puede dejar en 0, y la velocidad de ataque si la pones en 0 va mas rapido de lo normal la
     // recarga del arma o herramienta al atacar, por lo tanto se pone en negativo para que vaya igual o similar o un poco mejor a herramientas
@@ -51,7 +51,7 @@ public class ModItems {
     public static final Item MYTHRIL_PICKAXE = registerItem("mythril_pickaxe",
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
-    //Armaduras
+    //ARMADURAS
     //Se crea el casco de tipo mythril, se crea el objeto en base al ModArmorItem de minecraft, con esa clase, le da un efecto completo
     // a toda nuestra armadura, tan solo poniendosela en una parte de la armadura, despues se le agrega el material mythril y el equipmentSlot que
     //en este caso es la cabeza pq es el casco
@@ -68,7 +68,7 @@ public class ModItems {
     public static final Item MYTHRIL_BOOTS = registerItem("mythril_boots",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
-    //Comida
+    //COMIDA
     //Se crea el item de comida, y al final se le pone .food para que sea comestible, y se le añade el foodComponent del tipo de comida que sea
     public static final Item FRIES_POTATO = registerItem("fries_potato",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.FRIES_POTATO)));
@@ -78,18 +78,19 @@ public class ModItems {
 
 
 
-    //Items especiales
+    //ITEMS ESPECIALES
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ItemGroup.MISC).maxDamage(16).rarity(Rarity.EPIC)));
 
 
-    //Combustibles
+    //COMBUSTIBLES
     public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",
             new Item(new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
 
 
 
+    //CONSTRUCTORES
 
     //se crea el constructor para los items
     private static Item registerItem(String name, Item item){

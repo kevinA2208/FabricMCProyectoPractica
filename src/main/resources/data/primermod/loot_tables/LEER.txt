@@ -1,0 +1,1 @@
+Los loot_Tables son los archivos json donde contienentodo tipo de probabilidad o condición con la que se dropea un item o bloque

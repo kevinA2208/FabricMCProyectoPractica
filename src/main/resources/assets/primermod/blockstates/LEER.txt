@@ -1,0 +1,6 @@
+En esta carpeta, se añaden archivos json para bloques, donde se les da variantes
+como por ejemplo el boton, tiene diferentes posiciones, cuando esta en el suelo, en una pared
+etc, y en cada posicion, apunta hacia una direccion, este, norte, oeste, sur, etc, y en cada variante tiene que rotar
+el modelo del boton tantos grados, para que quede bien el bloque
+
+los bloques que no necesitan estas variantes, como un bloque normal como ores, etc, simplemente se les llama al modelo del bloque

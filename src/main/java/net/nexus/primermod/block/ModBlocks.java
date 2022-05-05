@@ -22,6 +22,7 @@ import java.util.List;
 
 public class ModBlocks {
 
+    //BLOQUES COMUNES
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroup.MYTHRIL, "tooltip.primermod.mythril_block");
 
@@ -34,16 +35,22 @@ public class ModBlocks {
     public static final Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ModItemGroup.MYTHRIL);
 
+
+    //BLOQUES ESPECIALES
+
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ItemGroup.BUILDING_BLOCKS);
 
-    //ATENCION, una vez creado los bloques no bloques, es necesario crear los archivos json en blockstates, models/block y apartir de ahi se les da una textura, ya sea nueva
+    //BLOQUES "FURNITURE"
+
+    //ATENCION, una vez creado los bloques "furniture" , es necesario crear los archivos json en blockstates, models/block y apartir de ahi se les da una textura, ya sea nueva
     //o usandose una que ya exista, ya que solo se utiliza la textura, pero la forma del bloque es el que se le da en este archivo
-    //En los archivos blockstates de los bloques no bloques, se pueden copiar y pegar de los archivos de los bloques originales en los assets de minecraft
+    //En los archivos blockstates de los bloques "furniture", se pueden copiar y pegar de los archivos de los bloques originales en los assets de minecraft
     //y modificar al gusto
 
     //se crea el mythril button, el boton customizado con mythril, que se basa en el esquema o estructura del boton original de piedra de minecraft
     //para esto se pone que el bloque sea un bloque de tipo StoneButtonBlock, se pone que no tiene colision porque es un boton
+
     public static final Block MYTHRIL_BUTTON = registerBlock("mythril_button",
             new StoneButtonBlock(FabricBlockSettings.of(Material.METAL)
                     .strength(6f).noCollision()),ModItemGroup.MYTHRIL);
@@ -79,8 +86,7 @@ public class ModBlocks {
 
 
 
-
-
+    //CONSTRUCTORES
     //Se copian las mismas funciones de registrar bloques y item bloques, pero esta vez se les agrega un parametro nuevo
     //llamado toolTipKey, con esta key, se les asignará un mensaje de tip en el inventario
     private static Block registerBlock(String name, Block block, ItemGroup group, String toolTipKey){
@@ -96,9 +102,7 @@ public class ModBlocks {
                     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
                         tooltip.add(new TranslatableText(toolTipKey));
                     }
-
                 });
-
     }
 
 

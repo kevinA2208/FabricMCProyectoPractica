@@ -1,0 +1,2 @@
+En esta carpeta tambien es necesario agregar los archivos json needs_material_tool, donde se agregan los bloque que se pueden picar con tal tipo de material
+dependiendo del tipo de herramienta que se escogió en la carpeta mineable

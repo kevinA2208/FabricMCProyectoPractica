@@ -1,0 +1,3 @@
+En esta carpeta se añaden los bloques que se van a poder picar apropiadamente con sus respectivas herramientas
+por ejemplo, si en el archivo hoe.json, pones un bloque de tu mod, con la azada se va a poder picar ese bloque
+se deben poner todos los bloques

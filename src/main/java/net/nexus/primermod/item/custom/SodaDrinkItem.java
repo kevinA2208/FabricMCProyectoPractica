@@ -23,6 +23,8 @@ public class SodaDrinkItem extends Item {
 
     public SodaDrinkItem(Settings settings) {super(settings);}
 
+
+    //Se crean los tips del item especial
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
@@ -32,6 +34,8 @@ public class SodaDrinkItem extends Item {
         }
     }
 
+    //Esta funcion se llama al terminar de usar un item, en este caso la soda
+    //al terminar la soda, le da al jugador regeneracion por 5 segundos
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user){
         if (!world.isClient) {
@@ -40,6 +44,8 @@ public class SodaDrinkItem extends Item {
         return super.finishUsing(stack, world, user);
     }
 
+
+    //Estas funcines traen los sonidos de uso y bebida, en este caso trae los de botellas de miel
     @Override
     public SoundEvent getDrinkSound() {
         return SoundEvents.ITEM_HONEY_BOTTLE_DRINK;

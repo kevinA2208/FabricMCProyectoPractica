@@ -1,0 +1,2 @@
+En esta carpeta, se crean los documentos de traducción o lenguajes, donde se les da el nombre que tendrá el item o bloque
+en el juego de minecraft, ademas de agregar tags a los items para dar mas información acerca de ellos

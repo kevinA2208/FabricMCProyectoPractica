@@ -12,6 +12,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
+    //En esta clase se crean los materiales de armadura, y se les da estadisticas a cada material
     BLOOD("blood", /*Multiplicador de durabilidad*/13, new int[]{/*Proteccion de botas*/ 2, /*Prote Pantalones*/ 6, /*Prote Pechera*/8, /*Prote Casco*/2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GOLD,
             0.0f, 0.5f, () -> Ingredient.ofItems(ModItems.BLOOD_INGOT)),
 

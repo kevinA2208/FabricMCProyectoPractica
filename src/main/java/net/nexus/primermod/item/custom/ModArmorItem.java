@@ -63,6 +63,7 @@ public class ModArmorItem extends ArmorItem {
             player.addStatusEffect(new StatusEffectInstance(mapStatusEffect.getEffectType(),
                     mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
 
+            //Con esta condición el daño al jugador causa daño al enemigo que hirió al jugador
             // if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
             //     player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
             // }
