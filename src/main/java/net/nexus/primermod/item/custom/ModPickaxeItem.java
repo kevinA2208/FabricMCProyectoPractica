@@ -1,4 +1,4 @@
-package net.nexus.primermod.block.custom;
+package net.nexus.primermod.item.custom;
 
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;

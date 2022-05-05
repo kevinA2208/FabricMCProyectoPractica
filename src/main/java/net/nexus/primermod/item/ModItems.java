@@ -6,11 +6,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.nexus.primermod.PrimerMod;
-import net.nexus.primermod.block.custom.ModAxeItem;
-import net.nexus.primermod.block.custom.ModHoeItem;
-import net.nexus.primermod.block.custom.ModPickaxeItem;
-import net.nexus.primermod.item.custom.DowsingRodItem;
-import net.nexus.primermod.item.custom.SodaDrinkItem;
+import net.nexus.primermod.item.custom.*;
 
 public class ModItems {
 
@@ -19,7 +15,7 @@ public class ModItems {
 
     //Materiales u ores
     public static final Item BLOOD_INGOT = registerItem("blood_ingot",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.BLOOD)));
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
@@ -36,23 +32,23 @@ public class ModItems {
     // recarga del arma o herramienta al atacar, por lo tanto se pone en negativo para que vaya igual o similar o un poco mejor a herramientas
     // del minecraft
     public static final Item BLOOD_SWORD = registerItem("blood_sword",
-            new SwordItem(ModToolMaterials.BLOOD, 1, -2.0F, new FabricItemSettings().group(ItemGroup.COMBAT)));
+            new ModBloodSwordItem(ModToolMaterials.BLOOD, 1, -3.0F, new FabricItemSettings().group(ModItemGroup.BLOOD)));
 
     public static final Item MYTHRIL_SWORD = registerItem("mythril_sword",
-            new SwordItem(ModToolMaterials.MYTHRIL, 1, -2.0F, new FabricItemSettings().group(ItemGroup.COMBAT)));
+            new SwordItem(ModToolMaterials.MYTHRIL, 1, -2.4F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     //en este caso se hace la herramienta hacha con el ModAxeItem que es el item original de minecraft y se le modifican los stats
     public static final Item MYTHRIL_AXE = registerItem("mythril_axe",
-            new ModAxeItem(ModToolMaterials.MYTHRIL, 0, -3.2F,new FabricItemSettings().group(ItemGroup.TOOLS)));
+            new ModAxeItem(ModToolMaterials.MYTHRIL, 1, -3.2F,new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_HOE = registerItem("mythril_hoe",
-            new ModHoeItem(ModToolMaterials.MYTHRIL, 0, -3.2F,new FabricItemSettings().group(ItemGroup.TOOLS)));
+            new ModHoeItem(ModToolMaterials.MYTHRIL, 0, -3.2F,new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_SHOVEL = registerItem("mythril_shovel",
-            new ShovelItem(ModToolMaterials.MYTHRIL, 0, -3.2F, new FabricItemSettings().group(ItemGroup.TOOLS)));
+            new ShovelItem(ModToolMaterials.MYTHRIL, 0, -3.2F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_PICKAXE = registerItem("mythril_pickaxe",
-            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ItemGroup.TOOLS)));
+            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     //Comida
     public static final Item FRIES_POTATO = registerItem("fries_potato",
