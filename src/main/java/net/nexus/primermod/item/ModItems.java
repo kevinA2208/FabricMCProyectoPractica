@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.nexus.primermod.PrimerMod;
+import net.nexus.primermod.block.ModBlocks;
 import net.nexus.primermod.item.custom.*;
 
 public class ModItems {
@@ -75,6 +76,15 @@ public class ModItems {
 
     public static final Item SODA_DRINK = registerItem("soda_drink",
             new SodaDrinkItem(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.SODA_DRINK)));
+
+    public static final Item GRAPE = registerItem("grape",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.GRAPE)));
+
+    //SEMILLAS
+    //Se crean las semillas de uva para plantarlas, es necesario crearlo con el AliasedBlockItem, para asociar el bloque en el que se plantarán estas semillas
+    //en este caso se le agrega el bloque GRAPE_VINE
+    public static final Item GRAPE_SEEDS = registerItem("grape_seeds",
+            new AliasedBlockItem(ModBlocks.GRAPE_VINE,new FabricItemSettings().group(ItemGroup.FOOD)));
 
 
 

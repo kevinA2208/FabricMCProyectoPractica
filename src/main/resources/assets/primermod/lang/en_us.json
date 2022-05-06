@@ -10,8 +10,10 @@
   "item.primermod.dowsing_rod": "Dowsing Rod",
   "item.primermod.lilac_flower_bulb": "Lilac Flower Bulb",
   "item.primermod.soda_drink": "Grape Soda Drink",
+  "item.primermod.grape": "Grape",
   "item.primermod.magic_mythril_dust": "Magic Mythril Dust",
   "item.primermod.data_tablet": "Data Tablet",
+  "item.primermod.grape_seeds": "Grape Seeds",
 
   "block.primermod.mythril_block": "Mythril Block",
   "block.primermod.mythril_ore": "Mythril Ore",
@@ -29,6 +31,8 @@
   "block.primermod.mythril_stairs": "Mythril Stairs",
   "block.primermod.lilac_flower": "Lilac Flower",
   "block.primermod.potted_lilac_flower": "Potted Lilac Flower",
+  "block.primermod.winter_window": "Winter Window",
+  "block.primermod.grape_vine": "Grape Vine",
 
   "itemGroup.primermod.mythril": "Mythril Tab",
 

@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
+import net.nexus.primermod.block.custom.GrapeVineBlock;
 import net.nexus.primermod.block.custom.SpeedyBlock;
 import net.nexus.primermod.item.ModItemGroup;
 import org.jetbrains.annotations.Nullable;
@@ -104,6 +105,16 @@ public class ModBlocks {
     public static final Block POTTED_LILAC_FLOWER = registerBlockWithoutBlockItem("potted_lilac_flower",
             new FlowerPotBlock(ModBlocks.LILAC_FLOWER, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM).nonOpaque()),ItemGroup.MISC);
 
+    //CRISTALES Y BLOQUES TRANSPARENTES
+
+    public static final Block WINTER_WINDOW = registerBlock("winter_window",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).strength(1.0f).nonOpaque()), ItemGroup.MISC);
+
+    //CULTIVOS
+    //Se crea el cultivo de uvas o grape y tiene que registrarse con la funcion registerBlockWithoutBlockItem, ya que no es un bloque en si, sino que se le
+    //agregan semillas encima
+    public static final Block GRAPE_VINE = registerBlockWithoutBlockItem("grape_vine",
+            new GrapeVineBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque()), ItemGroup.MISC);
 
 
     //CONSTRUCTORES
