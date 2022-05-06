@@ -10,6 +10,8 @@
     "primermod:mythril_slab",
     "primermod:mythril_stairs",
     "primermod:mythril_wall",
-    "primermod:speedy_block"
+    "primermod:speedy_block",
+    "primermod:kaupen_door",
+    "primermod:kaupen_trapdoor"
   ]
 }

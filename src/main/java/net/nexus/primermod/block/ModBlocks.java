@@ -81,10 +81,10 @@ public class ModBlocks {
     //En la puerta como se supone que va a ser de madera, es necesario ponerle el Material.WOOD, para que sea de madera, si se pone Material.METAL será necesario usar redstone para abrirla
     //como una puerta de metal
     public static final Block KAUPEN_DOOR = registerBlock("kaupen_door", new DoorBlock(
-            FabricBlockSettings.of(Material.WOOD).strength(4f).requiresTool().nonOpaque()),ModItemGroup.MYTHRIL);
+            FabricBlockSettings.of(Material.WOOD).strength(1.8f).nonOpaque()),ModItemGroup.MYTHRIL);
 
     public static final Block KAUPEN_TRAPDOOR = registerBlock("kaupen_trapdoor", new TrapdoorBlock(
-            FabricBlockSettings.of(Material.WOOD).strength(4f).requiresTool().nonOpaque()),ModItemGroup.MYTHRIL);
+            FabricBlockSettings.of(Material.WOOD).strength(1.8f).nonOpaque()),ModItemGroup.MYTHRIL);
 
 
     //FLORES Y POTS PARA FLORES

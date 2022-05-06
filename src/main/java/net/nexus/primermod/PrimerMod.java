@@ -3,6 +3,7 @@ package net.nexus.primermod;
 import net.fabricmc.api.ModInitializer;
 import net.nexus.primermod.block.ModBlocks;
 import net.nexus.primermod.item.ModItems;
+import net.nexus.primermod.painting.ModPaintings;
 import net.nexus.primermod.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,5 +20,6 @@ public class PrimerMod implements ModInitializer {
 		ModItems.registerModItem();
         ModBlocks.registerModBlock();
 		ModRegistries.registerModStuffs();
+		ModPaintings.registerPaintings();
 	}
 }
