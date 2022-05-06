@@ -83,9 +83,12 @@ public class ModItems {
             new DowsingRodItem(new FabricItemSettings().group(ItemGroup.MISC).maxDamage(16).rarity(Rarity.EPIC)));
 
 
-    //COMBUSTIBLES
+    //COMBUSTIBLES O POLVOS
     public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",
             new Item(new FabricItemSettings().group(ItemGroup.MATERIALS)));
+
+    public static final Item MAGIC_MYTHRIL_DUST = registerItem("magic_mythril_dust",
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
 
 
