@@ -7,12 +7,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.nexus.primermod.item.ModItems;
+import net.nexus.primermod.util.InventoryUtil;
 import net.nexus.primermod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
@@ -53,6 +56,10 @@ public class DowsingRodItem extends Item {
                 if(isValuableBlock(blockBelow)){
                     outputValuableCoordinates(positionClicked.down(i), player, blockBelow);
                     foundBlock = true;
+                    //aqui se pone si el jugador tiene la tablet en el inventario que añada la información
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
+                        addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
                     break;
                 }
             }
@@ -68,6 +75,20 @@ public class DowsingRodItem extends Item {
                 (player) -> player.sendToolBreakStatus(player.getActiveHand()));
 
         return super.useOnBlock(context);
+    }
+
+    //Esta funcion guarda la primera tablet encontrada en el inventario si tiene stackeada o mas de una
+    //despues crea un nuevo componente NBT donde le añade un texto con la información del bloque valioso que encontró
+    //el dowsingRod item, el nombre y su posición y despues le agrega la información NBT a la tablet
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("primermod.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
     }
 
 
