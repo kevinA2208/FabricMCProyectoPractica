@@ -1,0 +1,6 @@
+{
+  "parent": "primermod:item/kaupenbow",
+  "textures": {
+    "layer0": "primermod:item/kaupenbow_pulling_0"
+  }
+}

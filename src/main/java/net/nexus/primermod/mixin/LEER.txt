@@ -1,0 +1,4 @@
+La idea de mixing es que puedes cambiar o modificar ciertas clases como por ejemplo en el codigo base de minecraft
+Digamos que de la clase entity que es una entidad, esta clase tiene diferentes atributos, y quiero agregarle uno nuevo
+un atributo que es mio, pues esto no lo podria hacer directamente desde el codigo base de minecraft, sin embargo
+con el mixing puedo hacer esto en otra clase distinta, cambiando lo que yo quiera de la clase entity de minecraft

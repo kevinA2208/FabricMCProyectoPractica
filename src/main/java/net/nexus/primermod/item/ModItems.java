@@ -52,6 +52,9 @@ public class ModItems {
     public static final Item MYTHRIL_PICKAXE = registerItem("mythril_pickaxe",
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 0, -2.8F, new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
+    public static final Item KAUPENBOW = registerItem("kaupenbow",
+            new BowItem(new FabricItemSettings().group(ItemGroup.COMBAT).maxDamage(640)));
+
     //ARMADURAS
     //Se crea el casco de tipo mythril, se crea el objeto en base al ModArmorItem de minecraft, con esa clase, le da un efecto completo
     // a toda nuestra armadura, tan solo poniendosela en una parte de la armadura, despues se le agrega el material mythril y el equipmentSlot que
