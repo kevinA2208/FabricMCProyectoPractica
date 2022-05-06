@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mythril_pressure_plate",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "primermod:mythril_ingot"
+    }
+  },
+  "result": {
+    "item": "primermod:mythril_pressure_plate"
+  }
+}

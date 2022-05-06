@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mythril_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "primermod:mythril_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:acacia_stairs",
+    "count": 4
+  }
+}

@@ -1,2 +1,7 @@
 En esta carpeta tambien es necesario agregar los archivos json needs_material_tool, donde se agregan los bloque que se pueden picar con tal tipo de material
 dependiendo del tipo de herramienta que se escogió en la carpeta mineable
+
+Al momento de crear bloques en ModBlocks, si se quiere que el bloque se rompa con herramientas hay que ponerle requiresTool()
+en el material del bloque si se pone de STONE deberia romperse con herramientas de madera, si se pone METAL deberia romperse con herramientas de stone
+en adelante, si se pone en los archivos json de need_material_tool, en strenght se le da la fuerza que aguanta el bloque,
+esto hace que se rompa mas rapido o mas lento

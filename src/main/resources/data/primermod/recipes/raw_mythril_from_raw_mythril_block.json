@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "primermod:raw_mythril_block"
+    }
+  ],
+  "result": {
+    "item": "primermod:raw_mythril",
+    "count": 9
+  }
+}

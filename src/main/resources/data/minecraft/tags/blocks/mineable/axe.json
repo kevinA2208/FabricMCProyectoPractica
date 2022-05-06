@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "primermod:mythril_block",
+    "primermod:netherrack_mythril_ore",
+    "primermod:raw_mythril_block",
+    "primermod:mythril_fence",
+    "primermod:mythril_fence_gate",
+    "primermod:mythril_slab",
+    "primermod:mythril_stairs",
+    "primermod:mythril_wall",
+    "primermod:speedy_block",
+    "primermod:kaupen_door",
+    "primermod:kaupen_trapdoor"
+  ]
+}
