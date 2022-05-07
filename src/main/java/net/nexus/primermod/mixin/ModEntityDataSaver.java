@@ -1,5 +1,6 @@
 package net.nexus.primermod.mixin;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
 import net.nexus.primermod.util.IEntityDataSaver;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,7 +9,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import javax.swing.text.html.parser.Entity;
+
+
 
 //Con el mixin, vamos a inyectarle o agregarle cosas nuevas que nosotros queramos
 //a la clase de minecraft en este caso Entity
@@ -23,7 +25,7 @@ public abstract class ModEntityDataSaver implements IEntityDataSaver {
     //desde cero
     @Override
     public NbtCompound getPersistentData() {
-        if(this.persistentData == null){
+        if(this.persistentData == null) {
             this.persistentData = new NbtCompound();
         }
         return persistentData;
@@ -46,7 +48,7 @@ public abstract class ModEntityDataSaver implements IEntityDataSaver {
     @Inject(method = "readNbt", at = @At("HEAD"))
     protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
         if (nbt.contains("primermod.kaupen_data", 10)) {
-            persistentData = nbt.getCompound("tutorialmod.kaupen_data");
+            persistentData = nbt.getCompound("primermod.kaupen_data");
         }
     }
 
