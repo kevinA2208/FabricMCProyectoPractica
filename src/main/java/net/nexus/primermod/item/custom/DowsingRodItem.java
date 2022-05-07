@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -15,6 +16,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.nexus.primermod.item.ModItems;
+import net.nexus.primermod.sound.ModSounds;
 import net.nexus.primermod.util.InventoryUtil;
 import net.nexus.primermod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
@@ -60,6 +62,10 @@ public class DowsingRodItem extends Item {
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
                         addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
                     }
+
+                    //Aqui se le agrega un sonido cuando encuentre un ore valioso
+                    context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE,
+                            SoundCategory.BLOCKS, 1f, 1f);
                     break;
                 }
             }

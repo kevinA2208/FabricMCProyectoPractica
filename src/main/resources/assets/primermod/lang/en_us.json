@@ -33,6 +33,7 @@
   "block.primermod.potted_lilac_flower": "Potted Lilac Flower",
   "block.primermod.winter_window": "Winter Window",
   "block.primermod.grape_vine": "Grape Vine",
+  "block.primermod.mythril_lamp": "Mythril Lamp",
 
   "itemGroup.primermod.mythril": "Mythril Tab",
 
@@ -55,6 +56,8 @@
 
 
 
-  "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l"
+  "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l",
+
+  "primermod:dowsing_rod_found_ore": "Found Ore Sound"
 
 }

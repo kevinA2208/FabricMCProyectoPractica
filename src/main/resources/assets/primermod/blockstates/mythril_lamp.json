@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": {"model": "primermod:block/mythril_lamp_off"},
+    "clicked=true": {"model": "primermod:block/mythril_lamp_on"}
+  }
+}

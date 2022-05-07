@@ -1,0 +1,38 @@
+{
+  "dowsing_rod_found_ore": {
+    "subtitle": "primermod.dowsing_rod_found_ore",
+    "sounds": [
+      "primermod:dowsing_rod_found_ore"
+    ]
+  },
+  "mythril_lamp_break": {
+    "subtitle": "primermod.mythril_lamp_break",
+    "sounds": [
+      "primermod:mythril_lamp_break"
+    ]
+  },
+  "mythril_lamp_step": {
+    "subtitle": "primermod.mythril_lamp_step",
+    "sounds": [
+      "primermod:mythril_lamp_step"
+    ]
+  },
+  "mythril_lamp_place": {
+    "subtitle": "primermod.mythril_lamp_place",
+    "sounds": [
+      "primermod:mythril_lamp_place"
+    ]
+  },
+  "mythril_lamp_hit": {
+    "subtitle": "primermod.mythril_lamp_hit",
+    "sounds": [
+      "primermod:mythril_lamp_hit"
+    ]
+  },
+  "mythril_lamp_fall": {
+    "subtitle": "primermod.mythril_lamp_fall",
+    "sounds": [
+      "primermod:mythril_lamp_fall"
+    ]
+  }
+}

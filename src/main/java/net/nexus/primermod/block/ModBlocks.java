@@ -17,8 +17,10 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
 import net.nexus.primermod.block.custom.GrapeVineBlock;
+import net.nexus.primermod.block.custom.MythrilLampBlock;
 import net.nexus.primermod.block.custom.SpeedyBlock;
 import net.nexus.primermod.item.ModItemGroup;
+import net.nexus.primermod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -105,7 +107,17 @@ public class ModBlocks {
     public static final Block POTTED_LILAC_FLOWER = registerBlockWithoutBlockItem("potted_lilac_flower",
             new FlowerPotBlock(ModBlocks.LILAC_FLOWER, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM).nonOpaque()),ItemGroup.MISC);
 
-    //CRISTALES Y BLOQUES TRANSPARENTES
+    //CRISTALES BLOQUES TRANSPARENTES Y LAMPARAS
+
+    //Se crea la lampara de tipo mythrillampblock, se le añade luminance porque es necesario que ilumine
+    //y se le añade el estado inicial, y se obtiene el estado CLICKED, y si el estado es True,
+    //se le añade el nivel de luz 15 que es el maximo, si no lo es se le añade 0
+    //tambien se le añade el grupo de sonidos que se le agregan en ModSounds
+    public static final Block MYTHRIL_LAMP = registerBlock("mythril_lamp",
+            new MythrilLampBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(2.0f).requiresTool().luminance((state)
+                            -> state.get(MythrilLampBlock.CLICKED) ? 15 : 0).sounds(ModSounds.MYTHRIL_SOUNDS)),ModItemGroup.MYTHRIL);
+
 
     public static final Block WINTER_WINDOW = registerBlock("winter_window",
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).strength(1.0f).nonOpaque()), ItemGroup.MISC);
