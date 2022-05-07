@@ -9,6 +9,7 @@ import net.minecraft.util.registry.Registry;
 import net.nexus.primermod.PrimerMod;
 import net.nexus.primermod.block.ModBlocks;
 import net.nexus.primermod.item.custom.*;
+import net.nexus.primermod.sound.ModSounds;
 
 public class ModItems {
 
@@ -106,6 +107,13 @@ public class ModItems {
     public static final Item MAGIC_MYTHRIL_DUST = registerItem("magic_mythril_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
+    //DISCOS DE MUSICA
+    //Se crea el disco de musica, con la clase ModMusicDiscItem, donde tiene unos parametros
+    //el primero es el comparatorOutput, el segundo es el sonido que se crea desde la clase
+    //ModSounds, despues se le agrega al grupo MISC y se pone el maxCount(1)
+    //para que el disco no se stackee y solo sea 1 en el inventario.
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new ModMusicDiscItem(7, ModSounds.BAR_BRAWL,new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
 
 
 

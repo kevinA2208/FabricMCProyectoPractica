@@ -34,5 +34,13 @@
     "sounds": [
       "primermod:mythril_lamp_fall"
     ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "primermod:bar_brawl",
+        "stream": true
+      }
+    ]
   }
 }
