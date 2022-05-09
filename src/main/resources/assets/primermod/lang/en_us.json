@@ -35,6 +35,15 @@
   "block.primermod.grape_vine": "Grape Vine",
   "block.primermod.mythril_lamp": "Mythril Lamp",
 
+  "block.primermod.jacaranda_log": "Jacaranda Log",
+  "block.primermod.jacaranda_wood": "Jacaranda Wood",
+  "block.primermod.stripped_jacaranda_log": "Stripped Jacaranda Log",
+  "block.primermod.stripped_jacaranda_wood": "Stripped Jacaranda Wood",
+  "block.primermod.jacaranda_planks": "Jacaranda Planks",
+
+  "block.primermod.jacaranda_sapling": "Jacaranda Sapling",
+  "block.primermod.jacaranda_leaves": "Jacaranda Leaves",
+
   "itemGroup.primermod.mythril": "Mythril Tab",
 
   "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos",

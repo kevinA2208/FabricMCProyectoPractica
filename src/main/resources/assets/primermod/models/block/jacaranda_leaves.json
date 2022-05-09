@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "primermod:block/jacaranda_leaves"
+  }
+}

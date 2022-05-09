@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "primermod:jacaranda_log",
+    "primermod:jacaranda_wood",
+    "primermod:stripped_jacaranda_log",
+    "primermod:stripped_jacaranda_wood"
+  ]
+}

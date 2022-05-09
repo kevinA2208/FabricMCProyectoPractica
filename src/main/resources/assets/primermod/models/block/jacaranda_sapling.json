@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "primermod:block/jacaranda_sapling"
+  }
+}

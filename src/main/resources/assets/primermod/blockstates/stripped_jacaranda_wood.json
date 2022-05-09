@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "primermod:block/stripped_jacaranda_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "primermod:block/stripped_jacaranda_wood"
+    },
+    "axis=z": {
+      "model": "primermod:block/stripped_jacaranda_wood",
+      "x": 90
+    }
+  }
+}

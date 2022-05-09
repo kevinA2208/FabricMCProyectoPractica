@@ -17,10 +17,12 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
 import net.nexus.primermod.block.custom.GrapeVineBlock;
+import net.nexus.primermod.block.custom.ModSaplingBlock;
 import net.nexus.primermod.block.custom.MythrilLampBlock;
 import net.nexus.primermod.block.custom.SpeedyBlock;
 import net.nexus.primermod.item.ModItemGroup;
 import net.nexus.primermod.sound.ModSounds;
+import net.nexus.primermod.world.feature.tree.JacarandaSaplingGenerator;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -39,6 +41,30 @@ public class ModBlocks {
 
     public static final Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),ModItemGroup.MYTHRIL);
+
+    //Se añaden los bloques troncos de arboles jacaranda, se separan en los troncos, en la madera, en los troncos stripped, en la madera stripped y en los tablones
+    //la madera y troncos se crean con el pillarblock porque tienen textura a los lados y una distinta arriba y los tablones si son bloques normales
+    public static final Block JACARANDA_LOG = registerBlock("jacaranda_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block JACARANDA_WOOD = registerBlock("jacaranda_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block STRIPPED_JACARANDA_LOG = registerBlock("stripped_jacaranda_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block STRIPPED_JACARANDA_WOOD = registerBlock("stripped_jacaranda_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block JACARANDA_PLANKS = registerBlock("jacaranda_planks",
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block JACARANDA_LEAVES = registerBlock("jacaranda_leaves",
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block JACARANDA_SAPLING = registerBlock("jacaranda_sapling",
+            new ModSaplingBlock(new JacarandaSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ItemGroup.BUILDING_BLOCKS);
 
 
     //BLOQUES ESPECIALES
