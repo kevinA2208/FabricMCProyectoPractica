@@ -14,6 +14,7 @@
   "item.primermod.magic_mythril_dust": "Magic Mythril Dust",
   "item.primermod.data_tablet": "Data Tablet",
   "item.primermod.grape_seeds": "Grape Seeds",
+  "item.primermod.raw_blood": "Raw Blood",
 
   "block.primermod.mythril_block": "Mythril Block",
   "block.primermod.mythril_ore": "Mythril Ore",
@@ -35,6 +36,8 @@
   "block.primermod.grape_vine": "Grape Vine",
   "block.primermod.mythril_lamp": "Mythril Lamp",
   "block.primermod.deepslate_mythril_ore": "Deepslate Mythril Ore",
+  "block.primermod.blood_ore": "Blood Ore",
+  "block.primermod.deepslate_blood_ore": "Deepslate Blood Ore",
 
   "block.primermod.jacaranda_log": "Jacaranda Log",
   "block.primermod.jacaranda_wood": "Jacaranda Wood",
@@ -46,6 +49,7 @@
   "block.primermod.jacaranda_leaves": "Jacaranda Leaves",
 
   "itemGroup.primermod.mythril": "Mythril Tab",
+  "itemGroup.primermod.blood": "Blood Tab",
 
   "item.primermod.dowsing_rod.no_valuables": "No se han encontrado objetos valiosos",
   "item.primermod.dowsing_rod.tooltip.shift": "§lClick derecho§l para encontrar bloques valiosos!",

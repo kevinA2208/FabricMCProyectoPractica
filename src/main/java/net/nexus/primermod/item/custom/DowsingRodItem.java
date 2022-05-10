@@ -113,7 +113,7 @@ public class DowsingRodItem extends Item {
 
     //en esta función se traen las coordenadas del bloque valioso
     private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow){
-        player.sendMessage(new LiteralText("Encontrado" + blockBelow.asItem().getName().getString() + "en " +
+        player.sendMessage(new LiteralText("Se encontró " + blockBelow.asItem().getName().getString() + " en " +
                 "("+ blockPos.getX() + ", "+ blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
     }
 

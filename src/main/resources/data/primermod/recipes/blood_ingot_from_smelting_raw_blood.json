@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "blood",
+  "ingredient": {
+    "item": "primermod:raw_blood"
+  },
+  "result": "primermod:blood_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

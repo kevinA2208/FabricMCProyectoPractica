@@ -12,6 +12,12 @@
     "primermod:mythril_wall",
     "primermod:speedy_block",
     "primermod:kaupen_door",
-    "primermod:kaupen_trapdoor"
+    "primermod:kaupen_trapdoor",
+
+    "primermod:deepslate_mythril_ore",
+    "primermod:mythril_lamp",
+
+    "primermod:deepslate_blood_ore",
+    "primermod:blood_ore"
   ]
 }

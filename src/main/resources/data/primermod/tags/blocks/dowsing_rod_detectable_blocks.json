@@ -11,6 +11,7 @@
     "minecraft:lapis_ore",
     "minecraft:emerald_ore",
     "minecraft:copper_ore",
+    "primermod:mythril_ore",
     "minecraft:deepslate_coal_ore",
     "minecraft:deepslate_iron_ore",
     "minecraft:deepslate_copper_ore",
@@ -19,6 +20,7 @@
     "minecraft:deepslate_lapis_ore",
     "minecraft:deepslate_diamond_ore",
     "minecraft:deepslate_emerald_ore",
-    "minecraft:deepslate_copper_ore"
+    "minecraft:deepslate_copper_ore",
+    "primermod:deepslate_mythril_ore"
   ]
 }

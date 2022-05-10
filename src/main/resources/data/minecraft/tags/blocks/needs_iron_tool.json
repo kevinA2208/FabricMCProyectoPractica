@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "primermod:mythril_ore",
-    "primermod:netherrack_mythril_ore"
+    "primermod:netherrack_mythril_ore",
+    "primermod:deepslate_mythril_ore",
+
+    "primermod:deepslate_blood_ore",
+    "primermod:blood_ore"
   ]
 }

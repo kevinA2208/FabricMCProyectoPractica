@@ -32,36 +32,42 @@ public class ModBlocks {
     //BLOQUES COMUNES
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.MYTHRIL, "tooltip.primermod.mythril_block");
-
     public static final Block MYTHRIL_ORE = registerBlock("mythril_ore",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.5f).requiresTool()),ModItemGroup.MYTHRIL);
 
     public static final Block NETHERRACK_MYTHIL_ORE = registerBlock("netherrack_mythril_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.5f).requiresTool()),ModItemGroup.MYTHRIL);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),ModItemGroup.MYTHRIL);
 
     public static final Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),ModItemGroup.MYTHRIL);
 
     public static final Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block BLOOD_ORE = registerBlock("blood_ore",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool()),ModItemGroup.BLOOD);
+
+    public static final Block DEEPSLATE_BLOOD_ORE = registerBlock("deepslate_blood_ore",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool()), ModItemGroup.BLOOD);
+
 
 
     //Se añaden los bloques troncos de arboles jacaranda, se separan en los troncos, en la madera, en los troncos stripped, en la madera stripped y en los tablones
     //la madera y troncos se crean con el pillarblock porque tienen textura a los lados y una distinta arriba y los tablones si son bloques normales
     public static final Block JACARANDA_LOG = registerBlock("jacaranda_log",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).strength(4.0f)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block JACARANDA_WOOD = registerBlock("jacaranda_wood",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD).strength(4.0f)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block STRIPPED_JACARANDA_LOG = registerBlock("stripped_jacaranda_log",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG).strength(4.0f)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block STRIPPED_JACARANDA_WOOD = registerBlock("stripped_jacaranda_wood",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4.0f)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block JACARANDA_PLANKS = registerBlock("jacaranda_planks",
-            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).strength(4.0f)), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block JACARANDA_LEAVES = registerBlock("jacaranda_leaves",
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ItemGroup.BUILDING_BLOCKS);

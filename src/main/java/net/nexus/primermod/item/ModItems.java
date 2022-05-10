@@ -19,6 +19,9 @@ public class ModItems {
     //Materiales u ores
     public static final Item BLOOD_INGOT = registerItem("blood_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLOOD)));
+
+    public static final Item RAW_BLOOD = registerItem("raw_blood",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLOOD)));
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
@@ -27,6 +30,8 @@ public class ModItems {
 
     public static final Item RAW_MYTHRIL = registerItem("raw_mythril",
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+
 
 
     //ARMAS O HERRAMIENTAS

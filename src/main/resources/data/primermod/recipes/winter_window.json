@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    },
+    "S": {
+      "item": "minecraft:spruce_sapling"
+    }
+  },
+  "result": {
+    "item": "primermod:winter_window",
+    "count": 1
+  }
+}
