@@ -42,8 +42,13 @@ public class ModPlacedFeatures {
     //haciendo que la mayor cantidad de menas de ore esten en el medio del trapecio
     //hay diferentes formas de distribuir estas menas de ore, ademas del trapezoid
     public static final RegistryEntry<PlacedFeature> MYTHRIL_ORE_PLACED = PlacedFeatures.register("mythril_ore_placed",
-            ModConfiguredFeatures.MYTHRIL_ORE, ModOreFeatures.modifiersWithCount(7,
+            ModConfiguredFeatures.MYTHRIL_ORE, ModOreFeatures.modifiersWithCount(40,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(80))));
+
+    //Se agrega el placed Feature de los blood ores, con una altura uniform entre la altura 20
+    public static final RegistryEntry<PlacedFeature> BLOOD_ORE_PLACED = PlacedFeatures.register("blood_ore_placed",
+            ModConfiguredFeatures.BLOOD_ORE, ModOreFeatures.modifiersWithCount(10,
+                    HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(20)))); //Altura del ore
 
 
 
