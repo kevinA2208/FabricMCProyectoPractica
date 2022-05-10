@@ -42,6 +42,10 @@ public class ModBlocks {
     public static final Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),ModItemGroup.MYTHRIL);
 
+    public static final Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+
     //Se añaden los bloques troncos de arboles jacaranda, se separan en los troncos, en la madera, en los troncos stripped, en la madera stripped y en los tablones
     //la madera y troncos se crean con el pillarblock porque tienen textura a los lados y una distinta arriba y los tablones si son bloques normales
     public static final Block JACARANDA_LOG = registerBlock("jacaranda_log",

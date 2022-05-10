@@ -15,6 +15,8 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
+    //ARBOLES
+
     //El flujo de los features es que tenemos que crear un ConfiguredFeature del arbol de como se genera para despues hacerlo un PlacedFeature
     //para despues hacer un ConfiguredFeature de la vegetación de este arbol y donde debería spawnear
 
@@ -56,12 +58,34 @@ public class ModConfiguredFeatures {
                             JACARANDA_CHECKED));
 
 
+    //FLORES
+
     //Se crea el feature de lilac flower, se toma de los archivos vanilla de minecraft en feature y se edita
     //con lilac flower
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> LILAC_FLOWER =
             ConfiguredFeatures.register("lilac_flower", Feature.FLOWER,
                     ConfiguredFeatures.createRandomPatchFeatureConfig(64 ,PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LILAC_FLOWER)))));
+
+
+    //ORES
+
+    //Esta funcion lista lo que hace es, tomar bloques de piedra y bloques de piedra deepslate en el mundo,
+    //y reemplazarlos por bloques mythril ore y deepslate mythril ore, esto es mediante rule tags
+    //que dice que si el bloque de stone tiene el mismo tag que el bloque que se va a reemplazar se reemplaza
+    public static final List<OreFeatureConfig.Target> OVERWORLD_MYTHRIL_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    ModBlocks.MYTHRIL_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
+                    ModBlocks.DEEPSLATE_MYTHRIL_ORE.getDefaultState()));
+
+    //El configured feature registra el feature y toma la lista de OVERWORLD MYTHRIL ORE que se creó
+    //y se le agrega el tamaño de menas que se van a encontrar cerca, en este caso 9, entre menos tenga
+    //mas raro de encontrar el ore va a ser
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_ORE =
+            ConfiguredFeatures.register("mythril_ore", Feature.ORE,
+                    new OreFeatureConfig(OVERWORLD_MYTHRIL_ORES, 9));
+
 
 
 
