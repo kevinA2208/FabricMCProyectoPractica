@@ -6,7 +6,7 @@ import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
 import net.nexus.primermod.util.ModRegistries;
 import net.nexus.primermod.world.feature.ModConfiguredFeatures;
-import net.nexus.primermod.world.feature.gen.ModWorldGen;
+import net.nexus.primermod.world.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

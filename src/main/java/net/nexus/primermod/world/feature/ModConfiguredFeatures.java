@@ -1,5 +1,6 @@
 package net.nexus.primermod.world.feature;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
@@ -53,6 +54,16 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("jacaranda_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(JACARANDA_CHECKED, 0.5f)),
                             JACARANDA_CHECKED));
+
+
+    //Se crea el feature de lilac flower, se toma de los archivos vanilla de minecraft en feature y se edita
+    //con lilac flower
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> LILAC_FLOWER =
+            ConfiguredFeatures.register("lilac_flower", Feature.FLOWER,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(64 ,PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LILAC_FLOWER)))));
+
+
 
     //Se registra el mod de ConfiguredFeatures
     //Este tiene que estar de primero en el archivo PrimerMod OnInitialize()

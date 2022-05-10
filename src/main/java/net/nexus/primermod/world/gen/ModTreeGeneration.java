@@ -1,4 +1,4 @@
-package net.nexus.primermod.world.feature.gen;
+package net.nexus.primermod.world.gen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
