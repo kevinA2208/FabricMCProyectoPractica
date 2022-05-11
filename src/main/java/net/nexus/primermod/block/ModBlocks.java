@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
@@ -32,8 +33,11 @@ public class ModBlocks {
     //BLOQUES COMUNES
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.MYTHRIL, "tooltip.primermod.mythril_block");
+
+    //El mythril ore se crea a base del Ore Block para que de exp al minar el ore, en este caso con el UniformIntProvider.create nos da la experiencia
+    //entre los dos parametros que se les da, nos puede dar entre 2 a 6 de exp
     public static final Block MYTHRIL_ORE = registerBlock("mythril_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.5f).requiresTool()),ModItemGroup.MYTHRIL);
+            new OreBlock(FabricBlockSettings.of(Material.METAL).strength(4.5f).requiresTool(), UniformIntProvider.create(2, 6)),ModItemGroup.MYTHRIL);
 
     public static final Block NETHERRACK_MYTHIL_ORE = registerBlock("netherrack_mythril_ore",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),ModItemGroup.MYTHRIL);
@@ -42,13 +46,13 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),ModItemGroup.MYTHRIL);
 
     public static final Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+            new OreBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool(), UniformIntProvider.create(2, 6)), ModItemGroup.MYTHRIL);
 
     public static final Block BLOOD_ORE = registerBlock("blood_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool()),ModItemGroup.BLOOD);
+            new OreBlock(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool(), UniformIntProvider.create(3, 7)),ModItemGroup.BLOOD);
 
     public static final Block DEEPSLATE_BLOOD_ORE = registerBlock("deepslate_blood_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool()), ModItemGroup.BLOOD);
+            new OreBlock(FabricBlockSettings.of(Material.METAL).strength(5.0f).requiresTool(), UniformIntProvider.create(3, 7)), ModItemGroup.BLOOD);
 
 
 
