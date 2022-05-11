@@ -5,6 +5,7 @@ import net.nexus.primermod.block.ModBlocks;
 import net.nexus.primermod.effect.ModEffect;
 import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
+import net.nexus.primermod.potion.ModPotions;
 import net.nexus.primermod.util.ModLootTableModifiers;
 import net.nexus.primermod.util.ModRegistries;
 import net.nexus.primermod.world.feature.ModConfiguredFeatures;
@@ -37,5 +38,7 @@ public class PrimerMod implements ModInitializer {
 
 		//Se registran los efectos personalizados
 		ModEffect.registerEffects();
+		//Se registran las pociones, primero van los effects despues las potions
+		ModPotions.RegisterPotions();
 	}
 }
