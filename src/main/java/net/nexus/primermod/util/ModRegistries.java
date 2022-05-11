@@ -93,7 +93,7 @@ public class ModRegistries {
 
         //En este caso se registra un nuevo intercambio con otro aldeano con diferente profesión, y que sea nivel 3
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
-                factories -> {
+                (factories) -> {
                     factories.add((entity, random) -> new TradeOffer(
                             //Se dan 6 esmeraldas por 1 mythril pickaxe
                             new ItemStack(Items.EMERALD, 6),

@@ -1,0 +1,5 @@
+En esta carpeta se añaden los logros personalizados de minecraft
+primero se añade el logro y como será, su titulo, su icono, su descripción
+si se mostrará en el chat o no, si se mostrará arriba a la derecha o no
+
+y despues va la condición o el criterio de obtener este logro
