@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.nexus.primermod.block.ModBlocks;
 import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
+import net.nexus.primermod.util.ModLootTableModifiers;
 import net.nexus.primermod.util.ModRegistries;
 import net.nexus.primermod.world.feature.ModConfiguredFeatures;
 import net.nexus.primermod.world.gen.ModWorldGen;
@@ -29,5 +30,8 @@ public class PrimerMod implements ModInitializer {
 
 		//Se agrega la generación de los arboles
 		ModWorldGen.generateModWorldGen();
+
+		//Se agregan las modificaciones a los drops de las clases vanilla de minecraft
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
