@@ -75,6 +75,8 @@
 
   "tooltip.primermod.mythril_block": "Bloque magico de material §lMythril§l",
 
-  "primermod:dowsing_rod_found_ore": "Found Ore Sound"
+  "primermod:dowsing_rod_found_ore": "Found Ore Sound",
+
+  "effect.primermod.freeze": "Freeze"
 
 }

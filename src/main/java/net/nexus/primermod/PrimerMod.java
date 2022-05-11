@@ -2,6 +2,7 @@ package net.nexus.primermod;
 
 import net.fabricmc.api.ModInitializer;
 import net.nexus.primermod.block.ModBlocks;
+import net.nexus.primermod.effect.ModEffect;
 import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
 import net.nexus.primermod.util.ModLootTableModifiers;
@@ -33,5 +34,8 @@ public class PrimerMod implements ModInitializer {
 
 		//Se agregan las modificaciones a los drops de las clases vanilla de minecraft
 		ModLootTableModifiers.modifyLootTables();
+
+		//Se registran los efectos personalizados
+		ModEffect.registerEffects();
 	}
 }
