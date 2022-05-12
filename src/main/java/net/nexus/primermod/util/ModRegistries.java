@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.fabric.impl.object.builder.TradeOfferInternals;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffer;
@@ -92,7 +93,7 @@ public class ModRegistries {
                 });
 
         //En este caso se registra un nuevo intercambio con otro aldeano con diferente profesión, y que sea nivel 3
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
+        TradeOfferInternals.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
                 (factories) -> {
                     factories.add((entity, random) -> new TradeOffer(
                             //Se dan 6 esmeraldas por 1 mythril pickaxe

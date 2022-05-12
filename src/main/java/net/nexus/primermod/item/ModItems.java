@@ -104,6 +104,10 @@ public class ModItems {
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
 
+    //El primer item con modelo 3d creado en workbench, solo se crea el item en ModItems y se agrega el modelo json que se tiene
+    //de workbench despues de hacer el modelo 3d
+    public static final Item MYTHRIL_STAFF = registerItem("mythril_staff",
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL).maxCount(1)));
 
     //COMBUSTIBLES O POLVOS
     public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",

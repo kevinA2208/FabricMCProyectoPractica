@@ -17,10 +17,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
-import net.nexus.primermod.block.custom.GrapeVineBlock;
-import net.nexus.primermod.block.custom.ModSaplingBlock;
-import net.nexus.primermod.block.custom.MythrilLampBlock;
-import net.nexus.primermod.block.custom.SpeedyBlock;
+import net.nexus.primermod.block.custom.*;
 import net.nexus.primermod.item.ModItemGroup;
 import net.nexus.primermod.sound.ModSounds;
 import net.nexus.primermod.world.feature.tree.JacarandaSaplingGenerator;
@@ -83,8 +80,13 @@ public class ModBlocks {
 
     //BLOQUES ESPECIALES
 
+    //bloque con velocidad de tipo custom speedy block
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()),ItemGroup.BUILDING_BLOCKS);
+
+    //Se crea el bloque de modelo 3d Mythril Blaster
+    public static final Block MYTHRIL_BLASTER = registerBlock("mythril_blaster",
+            new MythrilBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()),ItemGroup.BUILDING_BLOCKS);
 
     //BLOQUES "FURNITURE"
 
