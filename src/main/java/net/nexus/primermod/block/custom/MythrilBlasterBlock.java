@@ -1,19 +1,25 @@
 package net.nexus.primermod.block.custom;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
+import net.minecraft.util.*;
 import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.nexus.primermod.block.entity.ModBlockEntities;
+import net.nexus.primermod.block.entity.MythrilBlasterBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -21,7 +27,7 @@ import java.util.stream.Stream;
 
 //Esta clase custom del mythril blaster o fundidor mythril es simplemente para que el bloque
 //pueda rotar segun como lo pongamos
-public class MythrilBlasterBlock extends Block {
+public class MythrilBlasterBlock extends BlockWithEntity implements BlockEntityProvider {
     //Esta función le da al bloque la propiedad de rotar horizontalmente, ya que queremos que rote, gracias al blockstate
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
@@ -127,5 +133,56 @@ public class MythrilBlasterBlock extends Block {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+
+    //BLOCK ENTITY, METODOS DEL BLOCK ENTITY:
+
+    //Este metodo se llama cuando el bloque blaster se rompa, al romperse, va a dropear todos los items que tenga dentro del inventario
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof MythrilBlasterBlockEntity) {
+                ItemScatterer.spawn(world, pos, (MythrilBlasterBlockEntity)blockEntity);
+                world.updateComparators(pos,this);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    //Con este metodó, se va a mostrar la interfaz o el gui del bloque blaster, al darle click derecho
+    //solo si el jugador está en el server y si existe una interfaz o screenHandler creado
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos,
+                              PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient) {
+            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+
+            if (screenHandlerFactory != null) {
+                player.openHandledScreen(screenHandlerFactory);
+            }
+        }
+
+        return ActionResult.SUCCESS;
+    }
+
+    //Metodo para renderizar el modelo del bloque, si no está el bloque será invisible
+    @Override
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
+    //Metodo para crear el entity block
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new MythrilBlasterBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, ModBlockEntities.MYTHRIL_BLASTER, MythrilBlasterBlockEntity::tick);
     }
 }

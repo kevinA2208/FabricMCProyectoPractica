@@ -2,6 +2,7 @@ package net.nexus.primermod;
 
 import net.fabricmc.api.ModInitializer;
 import net.nexus.primermod.block.ModBlocks;
+import net.nexus.primermod.block.entity.ModBlockEntities;
 import net.nexus.primermod.effect.ModEffect;
 import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
@@ -40,5 +41,7 @@ public class PrimerMod implements ModInitializer {
 		ModEffect.registerEffects();
 		//Se registran las pociones, primero van los effects despues las potions
 		ModPotions.RegisterPotions();
+
+		ModBlockEntities.registerAllBlockEntities();
 	}
 }

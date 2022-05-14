@@ -1,0 +1,1 @@
+En el package slot se agregan los tipos de slots customizados que van a haber en el gui del inventario de un bloque
