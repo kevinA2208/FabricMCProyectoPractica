@@ -1,0 +1,14 @@
+{
+  "type": "primermod:mythril_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_pickaxe"
+    },
+    {
+      "item": "primermod:mythril_ingot"
+    }
+  ],
+  "output": {
+    "item": "primermod:mythril_pickaxe"
+  }
+}

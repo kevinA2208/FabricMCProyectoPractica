@@ -7,8 +7,12 @@ import net.nexus.primermod.PrimerMod;
 
 public class ModScreenHandlers {
     //Se registran los screen handlers de los bloques
-    public static ScreenHandlerType<MythrilBlasterScreenHandler> MYTHRIL_BLASTER_SCREEN_HANDLER =
-            ScreenHandlerRegistry.registerSimple(
-                    new Identifier(PrimerMod.MOD_ID, "mythril_blaster"),
-                    MythrilBlasterScreenHandler::new);
+    public static ScreenHandlerType<MythrilBlasterScreenHandler> MYTHRIL_BLASTER_SCREEN_HANDLER;
+
+    public static void registerAllScreenHandlers(){
+        MYTHRIL_BLASTER_SCREEN_HANDLER =
+                ScreenHandlerRegistry.registerSimple(
+                        new Identifier(PrimerMod.MOD_ID, "mythril_blaster"),
+                        MythrilBlasterScreenHandler::new);
+    }
 }

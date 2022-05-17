@@ -35,6 +35,24 @@ public class MythrilBlasterScreen extends HandledScreen<MythrilBlasterScreenHand
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        //SE DIBUJAN LAS TEXTURAS DE LAS BARRAS DE PROGRESO DE FUEL Y CRAFTING
+
+        //Se revisa si está crafteando algo en el bloque
+        if(handler.isCrafting()) {
+            //si es así, que se ubique en las coordenadas 84 x, 22 y, que son las coordenadas donde se encuentra la flecha vacia de progreso
+            //en el gui del bloque, y que tome la textura que se encuentra en las coordenadas 176 y 14, y que está textura que tomó, la vaya pintando o dibujando
+            //segun el progreso que se tiene del handler, asi hasta que se pinte toda la flecha, que seria al llegar al maxProgress
+            drawTexture(matrices, x + 84, y + 22, 176, 14, handler.getScaledProgress(), 36);
+        }
+
+        //Esa tambien dibuja la barra de combustible en el inventario del bloque, pero ya está totalmente pintada con la textura
+        //solo que se va quitando esta textura de arriba hacia abajo segun el fuelProgress que se le da el handler
+        //cuando el fuelProgress llegue a 0 se quita la textura de fuego
+        if(handler.hasFuel()) {
+            drawTexture(matrices, x + 18, y + 33 + 14 - handler.getScaledFuelProgress(), 176,
+                    14 - handler.getScaledFuelProgress(), 14, handler.getScaledFuelProgress());
+        }
     }
 
     @Override
