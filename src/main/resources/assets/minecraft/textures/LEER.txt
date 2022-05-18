@@ -1,0 +1,4 @@
+En esta carpeta se añaden las texturas extras que van a estar en algunos bloques o items, que son
+desplegados o mostrados en el mundo de minecraft, como por ejemplo
+algunas partes extras de las armaduras en minecraft cuando el jugador se las pone
+o los carteles puestos en el mundo

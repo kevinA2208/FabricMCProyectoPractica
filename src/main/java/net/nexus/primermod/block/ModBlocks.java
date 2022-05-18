@@ -18,6 +18,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.nexus.primermod.PrimerMod;
 import net.nexus.primermod.block.custom.*;
+import net.nexus.primermod.block.entity.ModSignTypes;
 import net.nexus.primermod.item.ModItemGroup;
 import net.nexus.primermod.sound.ModSounds;
 import net.nexus.primermod.world.feature.tree.JacarandaSaplingGenerator;
@@ -131,6 +132,15 @@ public class ModBlocks {
     public static final Block KAUPEN_TRAPDOOR = registerBlock("kaupen_trapdoor", new TrapdoorBlock(
             FabricBlockSettings.of(Material.WOOD).strength(1.8f).nonOpaque()),ModItemGroup.MYTHRIL);
 
+    //CARTELES
+    //Se crean los bloques de sign y wall sing jacaranda, ambos se registran con registerBlockWithoutBlockItem, y se tiene
+    //que crear uno de wall SignBlock y el otro solo de signBlock, se copian de sus respectivas variantes de minecraft
+    //en este caso oak wall sign y oak sign, y se le añade al final el tipo de sign que es JACARANDA
+    public static final Block JACARANDA_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("jacaranda_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.JACARANDA), ItemGroup.BUILDING_BLOCKS);
+
+    public static final Block JACARANDA_SIGN_BLOCK = registerBlockWithoutBlockItem("jacaranda_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.JACARANDA), ItemGroup.BUILDING_BLOCKS);
 
     //FLORES Y POTS PARA FLORES
     //Las flores se crean con el tipo de bloque Flower de Minecraft, este bloque necesita dos parametros

@@ -109,6 +109,15 @@ public class ModItems {
     public static final Item MYTHRIL_STAFF = registerItem("mythril_staff",
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL).maxCount(1)));
 
+
+    //CARTEL
+    //se crea el item del cartel jacaranda, se registra como un nuevo SignItem, se le pone
+    //el max stack en 16 y al final se le dan dos parametros, que apuntan a los carteles creados en la clase
+    //ModBlocks, el jacaranda sign block y el jacaranda wall sign block
+    public static final Item JACARANDA_SIGN = registerItem("jacaranda_sign",
+            new SignItem(new FabricItemSettings().group(ModItemGroup.MYTHRIL).maxCount(16),
+                    ModBlocks.JACARANDA_SIGN_BLOCK, ModBlocks.JACARANDA_WALL_SIGN_BLOCK));
+
     //COMBUSTIBLES O POLVOS
     public static final Item LILAC_FLOWER_BULB = registerItem("lilac_flower_bulb",
             new Item(new FabricItemSettings().group(ItemGroup.MATERIALS)));
