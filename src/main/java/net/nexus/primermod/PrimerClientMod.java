@@ -2,9 +2,12 @@ package net.nexus.primermod;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.nexus.primermod.block.ModBlocks;
+import net.nexus.primermod.particle.ModParticles;
+import net.nexus.primermod.particle.custom.CitrineParticle;
 import net.nexus.primermod.screen.ModScreenHandlers;
 import net.nexus.primermod.screen.MythrilBlasterScreen;
 import net.nexus.primermod.util.ModModelPrecidateProvider;
@@ -31,5 +34,7 @@ public class PrimerClientMod implements ClientModInitializer {
 
         //Se registra el screen gui del bloque mythril blaster
         ScreenRegistry.register(ModScreenHandlers.MYTHRIL_BLASTER_SCREEN_HANDLER, MythrilBlasterScreen::new);
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.CITRINE_PARTICLE, CitrineParticle.Factory::new);
     }
 }

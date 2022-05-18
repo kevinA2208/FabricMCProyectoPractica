@@ -6,6 +6,7 @@ import net.nexus.primermod.block.entity.ModBlockEntities;
 import net.nexus.primermod.effect.ModEffect;
 import net.nexus.primermod.item.ModItems;
 import net.nexus.primermod.painting.ModPaintings;
+import net.nexus.primermod.particle.ModParticles;
 import net.nexus.primermod.potion.ModPotions;
 import net.nexus.primermod.recipe.ModRecipes;
 import net.nexus.primermod.screen.ModScreenHandlers;
@@ -47,5 +48,7 @@ public class PrimerMod implements ModInitializer {
 		ModBlockEntities.registerAllBlockEntities();
 		ModRecipes.registerRecipes();
 		ModScreenHandlers.registerAllScreenHandlers();
+
+		ModParticles.registerParticles();
 	}
 }

@@ -16,6 +16,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.nexus.primermod.item.ModItems;
+import net.nexus.primermod.particle.ModParticles;
 import net.nexus.primermod.sound.ModSounds;
 import net.nexus.primermod.util.InventoryUtil;
 import net.nexus.primermod.util.ModTags;
@@ -63,10 +64,14 @@ public class DowsingRodItem extends Item {
                         addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
                     }
 
+                    //Al encontrar un bloque se spawnean las particulas
+                    spawnFoundParticles(context, positionClicked);
+
                     //Aqui se le agrega un sonido cuando encuentre un ore valioso
                     context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE,
                             SoundCategory.BLOCKS, 1f, 1f);
                     break;
+
                 }
             }
 
@@ -82,6 +87,19 @@ public class DowsingRodItem extends Item {
 
         return super.useOnBlock(context);
     }
+
+    //Este metodo es para que al encontrar un bloque se spawneen particulas citrine en un circulo
+    private void spawnFoundParticles(ItemUsageContext pContext, BlockPos positionClicked) {
+        for(int i = 0; i < 360; i++) {
+            if(i % 20 == 0) {
+                pContext.getWorld().addParticle(ModParticles.CITRINE_PARTICLE,
+                        positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
+                        Math.cos(i) * 0.25d, 0.15d, Math.sin(i) * 0.25d);
+            }
+        }
+    }
+
+
 
     //Esta funcion guarda la primera tablet encontrada en el inventario si tiene stackeada o mas de una
     //despues crea un nuevo componente NBT donde le añade un texto con la información del bloque valioso que encontró
